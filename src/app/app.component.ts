@@ -13,37 +13,37 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Página inicial',
+      url: '/folder/inbox',
+      icon: 'home'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'Perfil',
+      url: '/profile',
+      icon: 'person'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
+      title: 'Filmes',
+      url: '/movies',
+      icon: 'film'
+    },
+    {
+      title: 'Séries',
+      url: '/series',
+      icon: 'videocam'
+    },
+    {
+      title: 'Animes',
+      url: '/animes',
+      icon: 'play'
+    },
+    {
+      title: 'Favoritos',
+      url: '/favorites',
       icon: 'heart'
     },
-    {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
-    },
-    {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
-    }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = ['By: Arthur Ribeiro', 'Hykem Corporation',];
 
   constructor(
     private platform: Platform,
