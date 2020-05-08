@@ -1,0 +1,83 @@
+<ion-header no-border [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/icon/animes.png" class="logo"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item lines="none">
+    <p slot="start">Populares</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/naruto.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/boku-no-hero.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/sword-art-online.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/death-note.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/tokyo-ghoul.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Fantasia</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/naruto.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/boku-no-hero.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/sword-art-online.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/death-note.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/tokyo-ghoul.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Realidade</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/naruto.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/boku-no-hero.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/sword-art-online.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/death-note.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/tokyo-ghoul.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>
