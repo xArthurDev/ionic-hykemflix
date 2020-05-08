@@ -7,6 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
+  slidesOptions = {
+    slidesPerView: 3
+  };
+  slidesOptions2 = {
+    slidesPerView: 2
+  };
   public folder: string;
 
   constructor(private activatedRoute: ActivatedRoute) { }

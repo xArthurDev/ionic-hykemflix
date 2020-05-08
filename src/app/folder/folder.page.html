@@ -1,21 +1,110 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header no-border [translucent]="true">
+  <ion-toolbar color="light">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-img src="../assets/icon/favicon.png" class="logo"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-slides [options]="slidesOptions2">
+    <ion-slide>
+  <ion-card class="card2" routerLink="/releases">
+    <h4>Lançamentos</h4>
+    <router-outlet></router-outlet>
+  </ion-card>
+    </ion-slide>
+    <ion-slide>
+  <ion-card class="card3" routerLink="/mwatched">
+    <h4>Mais assistidos</h4>
+    <router-outlet></router-outlet>
+  </ion-card>
+    </ion-slide>
+    <ion-slide>
+ <ion-card class="card4" routerLink="/upcoming">
+     <h4>Em breve</h4>
+     <router-outlet></router-outlet>
+  </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Séries</p>
+    <ion-icon name="arrow-forward" slot="end" routerLink="/series"></ion-icon>
+    <router-outlet></router-outlet>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/altered-carbon.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/la-casa-de-papel.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/stranger-things.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/the-witcher.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/the-100.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Filmes</p>
+    <ion-icon name="arrow-forward" slot="end" routerLink="/movies"></ion-icon>
+    <router-outlet></router-outlet>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/bright.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/o-milagre-na-cela7.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/o-silencio-do-pantano.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/the-king.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/the-kissing-booth.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Animes</p>
+    <ion-icon name="arrow-forward" slot="end" routerLink="/animes"></ion-icon>
+    <router-outlet></router-outlet>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/naruto.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/boku-no-hero.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/sword-art-online.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/death-note.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/tokyo-ghoul.jpg)'" class="poster1_card"></ion-card>
+    </ion-slide>
+  </ion-slides>
+  
 </ion-content>

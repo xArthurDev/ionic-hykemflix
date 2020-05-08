@@ -1,5 +1,5 @@
 ion-menu-button {
-  color: var(--ion-color-primary);
+  color: red;
 }
 
 #container {
@@ -25,4 +25,45 @@ ion-menu-button {
 
 #container a {
   text-decoration: none;
+}
+.logo {
+  height: 110px;
+}
+.poster1_card{
+  width: 140px;
+  height: 180px;
+  background-size: cover;
+}
+.card2{
+  width: 180px;
+  height: 70px;
+  background: linear-gradient(rgba(229, 9, 20, 0.61), rgba(229, 9, 20, 0.61)),
+  url('/assets/posters/stranger-things.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.card3{
+  width: 180px;
+  height: 70px;
+  background: linear-gradient(rgba(229, 9, 20, 0.61), rgba(229, 9, 20, 0.61)),
+  url('/assets/posters/altered-carbon.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.card4{
+  width: 180px;
+  height: 70px;
+  background: linear-gradient(rgba(229, 9, 20, 0.61), rgba(229, 9, 20, 0.61)),
+  url('/assets/posters/the-witcher.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
