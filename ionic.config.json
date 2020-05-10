@@ -1,5 +1,7 @@
 {
   "name": "hykemflix",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
