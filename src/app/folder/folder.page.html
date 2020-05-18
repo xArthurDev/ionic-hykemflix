@@ -4,11 +4,6 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-img src="../assets/icon/favicon.png" class="logo"></ion-img>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon name="search"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -36,6 +31,28 @@
   </ion-slides>
 
   <ion-item lines="none">
+    <p slot="start">Em Alta</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/altered-carbon.jpg)'" class="poster" (click)="teste()"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/la-casa-de-papel.jpg)'" class="poster" (click)="lacasa()"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/stranger-things.jpg)'" class="poster"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/the-witcher.jpg)'" class="poster"></ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/the-100.jpg)'" class="poster"></ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
     <p slot="start">Séries</p>
     <ion-icon name="arrow-forward" slot="end" routerLink="/series"></ion-icon>
     <router-outlet></router-outlet>
@@ -46,7 +63,7 @@
       <ion-card [style.backgroundImage]="'url(./assets/posters/altered-carbon.jpg)'" class="poster1_card" (click)="teste()"></ion-card>
     </ion-slide>
     <ion-slide>
-      <ion-card [style.backgroundImage]="'url(./assets/posters/la-casa-de-papel.jpg)'" class="poster1_card"></ion-card>
+      <ion-card [style.backgroundImage]="'url(./assets/posters/la-casa-de-papel.jpg)'" class="poster1_card" (click)="lacasa()"></ion-card>
     </ion-slide>
     <ion-slide>
       <ion-card [style.backgroundImage]="'url(./assets/posters/stranger-things.jpg)'" class="poster1_card"></ion-card>
@@ -81,30 +98,6 @@
     </ion-slide>
     <ion-slide>
       <ion-card [style.backgroundImage]="'url(./assets/posters/the-kissing-booth.jpg)'" class="poster1_card"></ion-card>
-    </ion-slide>
-  </ion-slides>
-
-  <ion-item lines="none">
-    <p slot="start">Animes</p>
-    <ion-icon name="arrow-forward" slot="end" routerLink="/animes"></ion-icon>
-    <router-outlet></router-outlet>
-  </ion-item>
-
-  <ion-slides [options]="slidesOptions">
-    <ion-slide>
-      <ion-card [style.backgroundImage]="'url(./assets/posters/naruto.jpg)'" class="poster1_card"></ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card [style.backgroundImage]="'url(./assets/posters/boku-no-hero.jpg)'" class="poster1_card"></ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card [style.backgroundImage]="'url(./assets/posters/sword-art-online.jpg)'" class="poster1_card"></ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card [style.backgroundImage]="'url(./assets/posters/death-note.jpg)'" class="poster1_card"></ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card [style.backgroundImage]="'url(./assets/posters/tokyo-ghoul.jpg)'" class="poster1_card"></ion-card>
     </ion-slide>
   </ion-slides>
   

@@ -6,6 +6,7 @@ import { BrightComponent } from '../filmes/bright/bright.component';
 import { Milagre7Component } from '../filmes/milagre7/milagre7.component';
 import { SilenciopantComponent } from '../filmes/silenciopant/silenciopant.component';
 import { ThekingComponent } from '../filmes/theking/theking.component';
+import { LacasaComponent } from '../cseries/lacasa/lacasa.component';
 
 @Component({
   selector: 'app-folder',
@@ -14,24 +15,18 @@ import { ThekingComponent } from '../filmes/theking/theking.component';
 })
 export class FolderPage implements OnInit {
 
-  youtubeUrl = 'https://www.youtube.com/watch?v=iHhcHTlGtRs';
-  youtubeId = 'iHhcHTlGtRs';
-
-
-
   slidesOptions = {
     slidesPerView: 3
   };
   slidesOptions2 = {
     slidesPerView: 2
   };
+  slidesOptions3 = {
+    slidesPerView: 1
+  };
   public folder: string;
 
-  constructor(private embedService: EmbedVideoService, private activatedRoute: ActivatedRoute, private ModalCtrl: ModalController) {
-    console.log(this.embedService.embed(this.youtubeUrl));
-    console.log(this.embedService.embed_youtube(this.youtubeId));
-   
-   }
+  constructor(private embedService: EmbedVideoService, private activatedRoute: ActivatedRoute, private ModalCtrl: ModalController) { }
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
@@ -63,6 +58,13 @@ export class FolderPage implements OnInit {
   async theking() {
     const modal = await this.ModalCtrl.create({
       component: ThekingComponent
+    });
+    modal.present();
+  }
+
+  async lacasa() {
+    const modal = await this.ModalCtrl.create({
+      component: LacasaComponent
     });
     modal.present();
   }
