@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>HykemFlix</ion-list-header>
-          <ion-note>Aproveite bastante!</ion-note>
+          <ion-note>Seu app de filmes e séries totalmente livre de anúncios!</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
@@ -22,6 +22,14 @@
             <ion-label>{{ label }}</ion-label>
           </ion-item>
         </ion-list>
+        <ion-item>
+          <ion-label>Modo Noturno</ion-label>
+          <ion-toggle (ionChange)="onClick($event)" slot="end">
+          </ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>HykemFlix vAlpha 1.0.8</ion-label>
+        </ion-item>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
