@@ -18,11 +18,6 @@ export class AppComponent implements OnInit {
       icon: 'home'
     },
     {
-      title: 'Perfil',
-      url: '/profile',
-      icon: 'person'
-    },
-    {
       title: 'Filmes',
       url: '/movies',
       icon: 'film'
@@ -31,17 +26,7 @@ export class AppComponent implements OnInit {
       title: 'Séries',
       url: '/series',
       icon: 'videocam'
-    },
-    {
-      title: 'Animes',
-      url: '/animes',
-      icon: 'play'
-    },
-    {
-      title: 'Favoritos',
-      url: '/favorites',
-      icon: 'heart'
-    },
+    }
   ];
   public labels = ['By: Arthur Ribeiro', 'Hykem Corporation',];
 
@@ -64,6 +49,25 @@ export class AppComponent implements OnInit {
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    }
+  }
+
+  onClick(event){
+    let systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+    systemDark.addListener(this.colorTest);
+    if(event.detail.checked){
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    else{
+      document.body.setAttribute('data-theme', 'light');
+    }
+  }
+
+   colorTest(systemInitiatedDark) {
+    if (systemInitiatedDark.matches) {
+      document.body.setAttribute('data-theme', 'dark');		
+    } else {
+      document.body.setAttribute('data-theme', 'light');
     }
   }
 }
