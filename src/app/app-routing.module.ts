@@ -12,24 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  {
     path: 'movies',
     loadChildren: () => import('./movies/movies.module').then( m => m.MoviesPageModule)
   },
   {
     path: 'series',
     loadChildren: () => import('./series/series.module').then( m => m.SeriesPageModule)
-  },
-  {
-    path: 'animes',
-    loadChildren: () => import('./animes/animes.module').then( m => m.AnimesPageModule)
-  },
-  {
-    path: 'favorites',
-    loadChildren: () => import('./favorites/favorites.module').then( m => m.FavoritesPageModule)
   },
   {
     path: 'releases',
