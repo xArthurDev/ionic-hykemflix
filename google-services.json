@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "18434250498",
+    "firebase_url": "https://hykemflix.firebaseio.com",
+    "project_id": "hykemflix",
+    "storage_bucket": "hykemflix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18434250498:android:0d244ba3d5f9602d52d41b",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18434250498-h17illu2ohdjbm7h3rd5v9ob7rmsa5pc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyjSqIO9_pz3umwRg95a8N_d_dzUx9Zuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18434250498-h17illu2ohdjbm7h3rd5v9ob7rmsa5pc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
