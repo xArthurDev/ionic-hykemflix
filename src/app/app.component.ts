@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
       icon: 'videocam'
     }
   ];
-  public labels = ['By: Arthur Ribeiro', 'Hykem Corporation',];
+  public labels = ['Dev: Arthur Ribeiro', 'Hykem Corporation',];
 
   constructor(
     private platform: Platform,
