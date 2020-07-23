@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EmbedVideoService } from 'ngx-embed-video';
 import { ModalController } from '@ionic/angular';
+
+//movies in component format
 import { BrightComponent } from '../filmes/bright/bright.component';
-import { Milagre7Component } from '../filmes/milagre7/milagre7.component';
-import { SilenciopantComponent } from '../filmes/silenciopant/silenciopant.component';
-import { ThekingComponent } from '../filmes/theking/theking.component';
-import { LacasaComponent } from '../cseries/lacasa/lacasa.component';
+import { Toystory4Component } from '../filmes/toystory4/toystory4.component';
+import { VingadoresultComponent } from '../filmes/vingadoresult/vingadoresult.component';
+import { WifiralphComponent } from '../filmes/wifiralph/wifiralph.component';
+import { LoganComponent } from '../filmes/logan/logan.component';
+
+
 
 @Component({
   selector: 'app-folder',
@@ -32,7 +36,7 @@ export class FolderPage implements OnInit {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
-  //Filmes dentro de modais
+  //movies inside their respective modals
 
   async bright() {
     const modal = await this.ModalCtrl.create({
@@ -41,30 +45,30 @@ export class FolderPage implements OnInit {
     modal.present();
   }
 
-  async milagre7() {
+  async toystory4() {
     const modal = await this.ModalCtrl.create({
-      component: Milagre7Component
+      component: Toystory4Component
     });
     modal.present();
   }
 
-  async silenciopant() {
+  async vingadoresult() {
     const modal = await this.ModalCtrl.create({
-      component: SilenciopantComponent
+      component: VingadoresultComponent
     });
     modal.present();
   }
 
-  async theking() {
+  async wifiralph() {
     const modal = await this.ModalCtrl.create({
-      component: ThekingComponent
+      component: WifiralphComponent
     });
     modal.present();
   }
 
-  async lacasa() {
+  async logan() {
     const modal = await this.ModalCtrl.create({
-      component: LacasaComponent
+      component: LoganComponent
     });
     modal.present();
   }
