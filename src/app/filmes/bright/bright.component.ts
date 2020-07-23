@@ -12,7 +12,7 @@ export class BrightComponent implements OnInit {
 
   ngOnInit() {}
 
-  close() {
+  fechar() {
     this.modalCtrl.dismiss();
 
   }
