@@ -56,18 +56,18 @@ export class AppComponent implements OnInit {
     let systemDark = window.matchMedia("(prefers-color-scheme: dark)");
     systemDark.addListener(this.colorTest);
     if(event.detail.checked){
-      document.body.setAttribute('data-theme', 'dark');
+      document.body.setAttribute('color-theme', 'dark');
     }
     else{
-      document.body.setAttribute('data-theme', 'light');
+      document.body.setAttribute('color-theme', 'light');
     }
   }
 
    colorTest(systemInitiatedDark) {
     if (systemInitiatedDark.matches) {
-      document.body.setAttribute('data-theme', 'dark');		
+      document.body.setAttribute('color-theme', 'dark');		
     } else {
-      document.body.setAttribute('data-theme', 'light');
+      document.body.setAttribute('color-theme', 'light');
     }
   }
 }
