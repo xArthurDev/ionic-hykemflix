@@ -1,0 +1,135 @@
+<ion-header no-border [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/icon/filmes.png" class="logo"></ion-img>
+  </ion-toolbar>
+  <ion-item lines="none">
+    <p slot="start">Arraste para o lado para ver mais títulos</p>
+  </ion-item>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item lines="none">
+    <p slot="start">Ação</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of acao">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Comédia</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of comedia">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Romance</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of romance">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Animação</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of animacao">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Aventura</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of aventura">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Família</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of familia">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Fantasia</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of fantasia">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Ficção Científica</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of ficcao">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Terror</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of terror">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Suspense</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of suspense">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Drama</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of drama">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Mistério</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of misterio">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>

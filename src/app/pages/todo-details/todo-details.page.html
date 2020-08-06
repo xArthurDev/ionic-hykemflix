@@ -1,0 +1,6388 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ todo.task }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+
+<ion-slides> 
+  <ion-slide class="poster1_card"> <img src="{{todo.poster}}" /> </ion-slide> 
+</ion-slides>
+
+<ion-chip>
+  <ion-icon name="play" color="danger"></ion-icon>
+  <ion-label>{{ todo.task }}</ion-label>
+</ion-chip>
+<ion-chip>
+  <ion-icon name="albums" color="danger"></ion-icon>
+  <ion-label>{{ todo.type }}</ion-label>
+</ion-chip>
+<ion-chip>
+  <ion-icon name="film" color="danger"></ion-icon>
+  <ion-label>{{ todo.genre }}</ion-label>
+</ion-chip>
+<ion-chip>
+  <ion-icon name="time" color="danger"></ion-icon>
+  <ion-label>{{ todo.duration }}</ion-label>
+</ion-chip>
+<ion-chip>
+  <ion-icon name="star" color="danger"></ion-icon>
+  <ion-label>Arraste para baixo para mais opções de players</ion-label>
+</ion-chip>
+<ion-chip>
+  <ion-icon name="alert" color="danger"></ion-icon>
+  <ion-label>Se for redirecionado para uma página no seu Navegador, (Anúncio) volte para o aplicativo</ion-label>
+</ion-chip>
+
+</ion-content>
+
+<ion-content>
+
+  <ion-chip>
+    <ion-icon name="logo-youtube" color="danger"></ion-icon>
+    <ion-label>Trailer</ion-label>
+  </ion-chip>
+  <iframe *ngIf="todo.trailer && todo.trailer.length > 0"
+  [src]= "(todo.trailer) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+<span *ngIf="todo.url && todo.url.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Dublado</ion-label>
+  </ion-chip>
+  <iframe
+  [src]= "(todo.url) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.url2 && todo.url2.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Legendado</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.url2) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep1dub && todo.temp1ep1dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 1 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep1dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep1leg && todo.temp1ep1leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 1 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep1leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep2dub && todo.temp1ep2dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 2 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep2dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep2leg && todo.temp1ep2leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 2 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep2leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep3dub && todo.temp1ep3dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 3 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep3dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep3leg && todo.temp1ep3leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 3 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep3leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep4dub && todo.temp1ep4dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 4 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep4dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep4leg && todo.temp1ep4leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 4 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep4leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep5dub && todo.temp1ep5dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 5 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep5dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep5leg && todo.temp1ep5leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 5 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep5leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep6dub && todo.temp1ep6dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 6 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep6dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep6leg && todo.temp1ep6leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 6 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep6leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep7dub && todo.temp1ep7dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 7 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep7dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep7leg && todo.temp1ep7leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 7 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep7leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep8dub && todo.temp1ep8dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 8 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep8dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep8leg && todo.temp1ep8leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 8 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep8leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep9dub && todo.temp1ep9dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 9 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep9dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep9leg && todo.temp1ep9leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 9 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep9leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep10dub && todo.temp1ep10dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 10 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep10dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep10leg && todo.temp1ep10leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 10 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep10leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep11dub && todo.temp1ep11dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 11 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep11dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep11leg && todo.temp1ep11leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 11 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep11leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep12dub && todo.temp1ep12dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 12 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep12dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep12leg && todo.temp1ep12leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 12 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep12leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep13dub && todo.temp1ep13dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 13 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep13dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep13leg && todo.temp1ep13leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 13 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep13leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep14dub && todo.temp1ep14dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 14 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep14dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep14leg && todo.temp1ep14leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 14 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep14leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep15dub && todo.temp1ep15dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 15 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep15dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep15leg && todo.temp1ep15leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 15 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep15leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep16dub && todo.temp1ep16dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 16 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep16dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep16leg && todo.temp1ep16leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 16 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep16leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep17dub && todo.temp1ep17dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 17 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep17dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep17leg && todo.temp1ep17leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 17 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep17leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep18dub && todo.temp1ep18dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 18 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep18dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep18leg && todo.temp1ep18leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 18 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep18leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep19dub && todo.temp1ep19dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 19 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep19dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep19leg && todo.temp1ep19leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 19 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep19leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep20dub && todo.temp1ep20dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 20 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep20dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep20leg && todo.temp1ep20leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 20 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep20leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep21dub && todo.temp1ep21dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 21 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep21dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep21leg && todo.temp1ep21leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 21 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep21leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep22dub && todo.temp1ep22dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 22 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep22dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep22leg && todo.temp1ep22leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 22 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep22leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep23dub && todo.temp1ep23dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 23 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep23dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep23leg && todo.temp1ep23leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 23 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep23leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep24dub && todo.temp1ep24dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 24 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep24dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep24leg && todo.temp1ep24leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 24 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep24leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep25dub && todo.temp1ep25dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 25 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep25dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep25leg && todo.temp1ep25leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 25 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep25leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep26dub && todo.temp1ep26dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 26 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep26dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep26leg && todo.temp1ep26leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 26 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep26leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep27dub && todo.temp1ep27dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 27 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep27dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep27leg && todo.temp1ep27leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 27 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep27leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep28dub && todo.temp1ep28dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 28 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep28dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep28leg && todo.temp1ep28leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 28 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep28leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep29dub && todo.temp1ep29dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 29 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep29dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep29leg && todo.temp1ep29leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 29 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep29leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep30dub && todo.temp1ep30dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 30 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep30dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp1ep30leg && todo.temp1ep30leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 1 - Episódio 30 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp1ep30leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep1dub && todo.temp2ep1dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 1 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep1dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep1leg && todo.temp2ep1leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 1 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep1leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep2dub && todo.temp2ep2dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 2 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep2dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep2leg && todo.temp2ep2leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 2 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep2leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep3dub && todo.temp2ep3dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 3 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep3dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep3leg && todo.temp2ep3leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 3 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep3leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep4dub && todo.temp2ep4dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 4 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep4dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep4leg && todo.temp2ep4leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 4 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep4leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep5dub && todo.temp2ep5dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 5 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep5dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep5leg && todo.temp2ep5leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 5 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep5leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep6dub && todo.temp2ep6dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 6 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep6dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep6leg && todo.temp2ep6leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 6 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep6leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep7dub && todo.temp2ep7dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 7 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep7dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep7leg && todo.temp2ep7leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 7 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep7leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep8dub && todo.temp2ep8dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 8 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep8dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep8leg && todo.temp2ep8leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 8 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep8leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep9dub && todo.temp2ep9dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 9 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep9dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep9leg && todo.temp2ep9leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 9 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep9leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep10dub && todo.temp2ep10dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 10 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep10dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep10leg && todo.temp2ep10leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 10 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep10leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep11dub && todo.temp2ep11dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 11 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep11dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep11leg && todo.temp2ep11leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 11 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep11leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep12dub && todo.temp2ep12dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 12 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep12dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep12leg && todo.temp2ep12leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 12 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep12leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep13dub && todo.temp2ep13dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 13 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep13dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep13leg && todo.temp2ep13leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 13 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep13leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep14dub && todo.temp2ep14dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 14 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep14dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep14leg && todo.temp2ep14leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 14 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep14leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep15dub && todo.temp2ep15dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 15 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep15dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep15leg && todo.temp2ep15leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 15 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep15leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep16dub && todo.temp2ep16dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 16 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep16dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep16leg && todo.temp2ep16leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 16 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep16leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep17dub && todo.temp2ep17dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 17 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep17dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep17leg && todo.temp2ep17leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 17 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep17leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep18dub && todo.temp2ep18dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 18 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep18dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep18leg && todo.temp2ep18leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 18 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep18leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep19dub && todo.temp2ep19dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 19 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep19dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep19leg && todo.temp2ep19leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 19 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep19leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep20dub && todo.temp2ep20dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 20 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep20dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep20leg && todo.temp2ep20leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 20 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep20leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep21dub && todo.temp2ep21dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 21 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep21dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep21leg && todo.temp2ep21leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 21 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep21leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep22dub && todo.temp2ep22dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 22 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep22dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep22leg && todo.temp2ep22leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 22 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep22leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep23dub && todo.temp2ep23dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 23 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep23dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep23leg && todo.temp2ep23leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 23 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep23leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep24dub && todo.temp2ep24dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 24 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep24dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep24leg && todo.temp2ep24leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 24 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep24leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep25dub && todo.temp2ep25dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 25 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep25dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep25leg && todo.temp2ep25leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 25 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep25leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep26dub && todo.temp2ep26dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 26 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep26dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep26leg && todo.temp2ep26leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 26 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep26leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep27dub && todo.temp2ep27dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 27 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep27dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep27leg && todo.temp2ep27leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 27 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep27leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep28dub && todo.temp2ep28dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 28 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep28dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep28leg && todo.temp2ep28leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 28 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep28leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep29dub && todo.temp2ep29dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 29 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep29dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep29leg && todo.temp2ep29leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 29 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep29leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep30dub && todo.temp2ep30dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 30 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep30dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp2ep30leg && todo.temp2ep30leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 2 - Episódio 30 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp2ep30leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep1dub && todo.temp3ep1dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 1 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep1dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep1leg && todo.temp3ep1leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 1 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep1leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep2dub && todo.temp3ep2dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 2 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep2dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep2leg && todo.temp3ep2leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 2 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep2leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep3dub && todo.temp3ep3dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 3 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep3dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep3leg && todo.temp3ep3leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 3 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep3leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep4dub && todo.temp3ep4dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 4 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep4dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep4leg && todo.temp3ep4leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 4 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep4leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep5dub && todo.temp3ep5dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 5 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep5dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep5leg && todo.temp3ep5leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 5 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep5leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep6dub && todo.temp3ep6dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 6 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep6dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep6leg && todo.temp3ep6leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 6 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep6leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep7dub && todo.temp3ep7dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 7 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep7dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep7leg && todo.temp3ep7leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 7 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep7leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep8dub && todo.temp3ep8dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 8 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep8dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep8leg && todo.temp3ep8leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 8 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep8leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep9dub && todo.temp3ep9dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 9 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep9dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep9leg && todo.temp3ep9leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 9 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep9leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep10dub && todo.temp3ep10dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 10 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep10dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep10leg && todo.temp3ep10leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 10 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep10leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep11dub && todo.temp3ep11dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 11 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep11dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep11leg && todo.temp3ep11leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 11 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep11leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep12dub && todo.temp3ep12dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 12 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep12dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep12leg && todo.temp3ep12leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 12 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep12leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep13dub && todo.temp3ep13dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 13 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep13dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep13leg && todo.temp3ep13leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 13 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep13leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep14dub && todo.temp3ep14dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 14 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep14dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep14leg && todo.temp3ep14leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 14 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep14leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep15dub && todo.temp3ep15dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 15 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep15dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep15leg && todo.temp3ep15leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 15 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep15leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep16dub && todo.temp3ep16dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 16 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep16dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep16leg && todo.temp3ep16leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 16 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep16leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep17dub && todo.temp3ep17dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 17 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep17dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep17leg && todo.temp3ep17leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 17 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep17leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep18dub && todo.temp3ep18dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 18 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep18dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep18leg && todo.temp3ep18leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 18 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep18leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep19dub && todo.temp3ep19dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 19 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep19dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep19leg && todo.temp3ep19leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 19 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep19leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep20dub && todo.temp3ep20dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 20 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep20dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep20leg && todo.temp3ep20leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 20 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep20leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep21dub && todo.temp3ep21dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 21 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep21dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep21leg && todo.temp3ep21leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 21 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep21leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep22dub && todo.temp3ep22dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 22 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep22dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep22leg && todo.temp3ep22leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 22 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep22leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep23dub && todo.temp3ep23dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 23 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep23dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep23leg && todo.temp3ep23leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 23 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep23leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep24dub && todo.temp3ep24dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 24 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep24dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep24leg && todo.temp3ep24leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 24 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep24leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep25dub && todo.temp3ep25dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 25 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep25dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep25leg && todo.temp3ep25leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 25 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep25leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep26dub && todo.temp3ep26dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 26 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep26dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep26leg && todo.temp3ep26leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 26 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep26leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep27dub && todo.temp3ep27dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 27 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep27dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep27leg && todo.temp3ep27leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 27 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep27leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep28dub && todo.temp3ep28dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 28 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep28dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep28leg && todo.temp3ep28leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 28 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep28leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep29dub && todo.temp3ep29dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 29 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep29dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep29leg && todo.temp3ep29leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 29 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep29leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep30dub && todo.temp3ep30dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 30 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep30dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp3ep30leg && todo.temp3ep30leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 3 - Episódio 30 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp3ep30leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep1dub && todo.temp4ep1dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 1 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep1dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep1leg && todo.temp4ep1leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 1 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep1leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep2dub && todo.temp4ep2dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 2 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep2dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep2leg && todo.temp4ep2leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 2 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep2leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep3dub && todo.temp4ep3dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 3 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep3dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep3leg && todo.temp4ep3leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 3 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep3leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep4dub && todo.temp4ep4dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 4 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep4dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep4leg && todo.temp4ep4leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 4 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep4leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep5dub && todo.temp4ep5dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 5 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep5dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep5leg && todo.temp4ep5leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 5 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep5leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep6dub && todo.temp4ep6dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 6 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep6dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep6leg && todo.temp4ep6leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 6 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep6leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep7dub && todo.temp4ep7dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 7 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep7dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep7leg && todo.temp4ep7leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 7 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep7leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep8dub && todo.temp4ep8dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 8 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep8dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep8leg && todo.temp4ep8leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 8 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep8leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep9dub && todo.temp4ep9dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 9 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep9dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep9leg && todo.temp4ep9leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 9 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep9leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep10dub && todo.temp4ep10dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 10 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep10dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep10leg && todo.temp4ep10leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 10 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep10leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep11dub && todo.temp4ep11dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 11 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep11dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep11leg && todo.temp4ep11leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 11 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep11leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep12dub && todo.temp4ep12dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 12 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep12dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep12leg && todo.temp4ep12leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 12 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep12leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep13dub && todo.temp4ep13dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 13 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep13dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep13leg && todo.temp4ep13leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 13 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep13leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep14dub && todo.temp4ep14dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 14 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep14dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep14leg && todo.temp4ep14leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 14 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep14leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep15dub && todo.temp4ep15dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 15 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep15dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep15leg && todo.temp4ep15leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 15 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep15leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep16dub && todo.temp4ep16dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 16 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep16dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep16leg && todo.temp4ep16leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 16 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep16leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep17dub && todo.temp4ep17dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 17 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep17dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep17leg && todo.temp4ep17leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 17 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep17leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep18dub && todo.temp4ep18dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 18 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep18dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep18leg && todo.temp4ep18leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 18 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep18leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep19dub && todo.temp4ep19dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 19 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep19dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep19leg && todo.temp4ep19leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 19 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep19leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep20dub && todo.temp4ep20dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 20 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep20dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep20leg && todo.temp4ep20leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 20 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep20leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep21dub && todo.temp4ep21dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 21 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep21dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep21leg && todo.temp4ep21leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 21 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep21leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep22dub && todo.temp4ep22dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 22 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep22dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep22leg && todo.temp4ep22leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 22 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep22leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep23dub && todo.temp4ep23dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 23 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep23dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep23leg && todo.temp4ep23leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 23 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep23leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep24dub && todo.temp4ep24dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 24 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep24dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep24leg && todo.temp4ep24leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 24 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep24leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep25dub && todo.temp4ep25dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 25 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep25dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep25leg && todo.temp4ep25leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 25 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep25leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep26dub && todo.temp4ep26dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 26 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep26dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep26leg && todo.temp4ep26leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 26 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep26leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep27dub && todo.temp4ep27dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 27 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep27dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep27leg && todo.temp4ep27leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 27 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep27leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep28dub && todo.temp4ep28dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 28 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep28dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep28leg && todo.temp4ep28leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 28 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep28leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep29dub && todo.temp4ep29dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 29 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep29dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep29leg && todo.temp4ep29leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 29 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep29leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep30dub && todo.temp4ep30dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 30 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep30dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp4ep30leg && todo.temp4ep30leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 4 - Episódio 30 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp4ep30leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep1dub && todo.temp5ep1dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 1 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep1dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep1leg && todo.temp5ep1leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 1 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep1leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep2dub && todo.temp5ep2dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 2 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep2dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep2leg && todo.temp5ep2leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 2 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep2leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep3dub && todo.temp5ep3dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 3 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep3dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep3leg && todo.temp5ep3leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 3 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep3leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep4dub && todo.temp5ep4dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 4 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep4dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep4leg && todo.temp5ep4leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 4 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep4leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep5dub && todo.temp5ep5dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 5 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep5dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep5leg && todo.temp5ep5leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 5 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep5leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep6dub && todo.temp5ep6dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 6 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep6dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep6leg && todo.temp5ep6leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 6 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep6leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep7dub && todo.temp5ep7dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 7 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep7dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep7leg && todo.temp5ep7leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 7 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep7leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep8dub && todo.temp5ep8dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 8 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep8dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep8leg && todo.temp5ep8leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 8 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep8leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep9dub && todo.temp5ep9dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 9 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep9dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep9leg && todo.temp5ep9leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 9 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep9leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep10dub && todo.temp5ep10dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 10 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep10dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep10leg && todo.temp5ep10leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 10 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep10leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep11dub && todo.temp5ep11dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 11 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep11dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep11leg && todo.temp5ep11leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 11 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep11leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep12dub && todo.temp5ep12dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 12 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep12dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep12leg && todo.temp5ep12leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 12 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep12leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep13dub && todo.temp5ep13dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 13 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep13dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep13leg && todo.temp5ep13leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 13 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep13leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep14dub && todo.temp5ep14dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 14 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep14dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep14leg && todo.temp5ep14leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 14 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep14leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep15dub && todo.temp5ep15dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 15 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep15dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep15leg && todo.temp5ep15leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 15 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep15leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep16dub && todo.temp5ep16dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 16 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep16dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep16leg && todo.temp5ep16leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 16 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep16leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep17dub && todo.temp5ep17dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 17 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep17dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep17leg && todo.temp5ep17leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 17 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep17leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep18dub && todo.temp5ep18dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 18 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep18dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep18leg && todo.temp5ep18leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 18 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep18leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep19dub && todo.temp5ep19dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 19 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep19dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep19leg && todo.temp5ep19leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 19 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep19leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep20dub && todo.temp5ep20dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 20 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep20dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep20leg && todo.temp5ep20leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 20 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep20leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep21dub && todo.temp5ep21dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 21 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep21dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep21leg && todo.temp5ep21leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 21 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep21leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep22dub && todo.temp5ep22dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 22 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep22dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep22leg && todo.temp5ep22leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 22 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep22leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep23dub && todo.temp5ep23dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 23 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep23dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep23leg && todo.temp5ep23leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 23 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep23leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep24dub && todo.temp5ep24dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 24 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep24dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep24leg && todo.temp5ep24leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 24 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep24leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep25dub && todo.temp5ep25dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 25 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep25dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep25leg && todo.temp5ep25leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 25 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep25leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep26dub && todo.temp5ep26dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 26 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep26dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep26leg && todo.temp5ep26leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 26 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep26leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep27dub && todo.temp5ep27dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 27 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep27dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep27leg && todo.temp5ep27leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 27 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep27leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep28dub && todo.temp5ep28dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 28 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep28dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep28leg && todo.temp5ep28leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 28 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep28leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep29dub && todo.temp5ep29dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 29 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep29dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep29leg && todo.temp5ep29leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 29 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep29leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep30dub && todo.temp5ep30dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 30 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep30dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp5ep30leg && todo.temp5ep30leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 5 - Episódio 30 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp5ep30leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep1dub && todo.temp6ep1dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 1 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep1dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep1leg && todo.temp6ep1leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 1 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep1leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep2dub && todo.temp6ep2dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 2 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep2dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep2leg && todo.temp6ep2leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 2 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep2leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep3dub && todo.temp6ep3dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 3 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep3dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep3leg && todo.temp6ep3leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 3 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep3leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep4dub && todo.temp6ep4dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 4 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep4dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep4leg && todo.temp6ep4leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 4 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep4leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep5dub && todo.temp6ep5dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 5 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep5dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep5leg && todo.temp6ep5leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 5 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep5leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep6dub && todo.temp6ep6dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 6 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep6dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep6leg && todo.temp6ep6leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 6 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep6leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep7dub && todo.temp6ep7dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 7 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep7dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep7leg && todo.temp6ep7leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 7 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep7leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep8dub && todo.temp6ep8dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 8 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep8dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep8leg && todo.temp6ep8leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 8 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep8leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep9dub && todo.temp6ep9dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 9 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep9dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep9leg && todo.temp6ep9leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 9 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep9leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep10dub && todo.temp6ep10dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 10 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep10dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep10leg && todo.temp6ep10leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 10 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep10leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep11dub && todo.temp6ep11dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 11 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep11dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep11leg && todo.temp6ep11leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 11 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep11leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep12dub && todo.temp6ep12dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 12 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep12dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep12leg && todo.temp6ep12leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 12 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep12leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep13dub && todo.temp6ep13dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 13 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep13dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep13leg && todo.temp6ep13leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 13 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep13leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep14dub && todo.temp6ep14dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 14 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep14dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep14leg && todo.temp6ep14leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 14 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep14leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep15dub && todo.temp6ep15dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 15 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep15dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep15leg && todo.temp6ep15leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 15 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep15leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep16dub && todo.temp6ep16dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 16 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep16dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep16leg && todo.temp6ep16leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 16 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep16leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep17dub && todo.temp6ep17dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 17 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep17dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep17leg && todo.temp6ep17leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 17 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep17leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep18dub && todo.temp6ep18dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 18 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep18dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep18leg && todo.temp6ep18leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 18 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep18leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep19dub && todo.temp6ep19dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 19 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep19dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep19leg && todo.temp6ep19leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 19 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep19leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep20dub && todo.temp6ep20dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 20 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep20dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep20leg && todo.temp6ep20leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 20 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep20leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep21dub && todo.temp6ep21dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 21 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep21dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep21leg && todo.temp6ep21leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 21 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep21leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep22dub && todo.temp6ep22dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 22 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep22dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep22leg && todo.temp6ep22leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 22 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep22leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep23dub && todo.temp6ep23dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 23 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep23dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep23leg && todo.temp6ep23leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 23 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep23leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep24dub && todo.temp6ep24dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 24 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep24dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep24leg && todo.temp6ep24leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 24 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep24leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep25dub && todo.temp6ep25dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 25 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep25dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep25leg && todo.temp6ep25leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 25 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep25leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep26dub && todo.temp6ep26dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 26 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep26dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep26leg && todo.temp6ep26leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 26 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep26leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep27dub && todo.temp6ep27dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 27 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep27dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep27leg && todo.temp6ep27leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 27 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep27leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep28dub && todo.temp6ep28dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 28 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep28dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep28leg && todo.temp6ep28leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 28 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep28leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep29dub && todo.temp6ep29dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 29 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep29dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep29leg && todo.temp6ep29leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 29 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep29leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep30dub && todo.temp6ep30dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 30 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep30dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp6ep30leg && todo.temp6ep30leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 6 - Episódio 30 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp6ep30leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep1dub && todo.temp7ep1dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 1 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep1dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep1leg && todo.temp7ep1leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 1 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep1leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep2dub && todo.temp7ep2dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 2 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep2dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep2leg && todo.temp7ep2leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 2 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep2leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep3dub && todo.temp7ep3dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 3 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep3dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep3leg && todo.temp7ep3leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 3 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep3leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep4dub && todo.temp7ep4dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 4 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep4dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep4leg && todo.temp7ep4leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 4 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep4leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep5dub && todo.temp7ep5dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 5 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep5dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep5leg && todo.temp7ep5leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 5 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep5leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep6dub && todo.temp7ep6dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 6 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep6dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep6leg && todo.temp7ep6leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 6 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep6leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep7dub && todo.temp7ep7dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 7 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep7dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep7leg && todo.temp7ep7leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 7 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep7leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep8dub && todo.temp7ep8dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 8 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep8dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep8leg && todo.temp7ep8leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 8 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep8leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep9dub && todo.temp7ep9dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 9 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep9dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep9leg && todo.temp7ep9leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 9 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep9leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep10dub && todo.temp7ep10dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 10 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep10dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep10leg && todo.temp7ep10leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 10 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep10leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep11dub && todo.temp7ep11dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 11 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep11dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep11leg && todo.temp7ep11leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 11 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep11leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep12dub && todo.temp7ep12dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 12 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep12dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep12leg && todo.temp7ep12leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 12 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep12leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep13dub && todo.temp7ep13dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 13 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep13dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep13leg && todo.temp7ep13leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 13 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep13leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep14dub && todo.temp7ep14dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 14 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep14dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep14leg && todo.temp7ep14leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 14 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep14leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep15dub && todo.temp7ep15dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 15 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep15dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep15leg && todo.temp7ep15leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 15 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep15leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep16dub && todo.temp7ep16dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 16 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep16dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep16leg && todo.temp7ep16leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 16 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep16leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep17dub && todo.temp7ep17dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 17 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep17dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep17leg && todo.temp7ep17leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 17 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep17leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep18dub && todo.temp7ep18dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 18 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep18dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep18leg && todo.temp7ep18leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 18 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep18leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep19dub && todo.temp7ep19dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 19 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep19dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep19leg && todo.temp7ep19leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 19 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep19leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep20dub && todo.temp7ep20dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 20 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep20dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep20leg && todo.temp7ep20leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 20 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep20leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep21dub && todo.temp7ep21dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 21 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep21dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep21leg && todo.temp7ep21leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 21 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep21leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep22dub && todo.temp7ep22dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 22 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep22dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep22leg && todo.temp7ep22leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 22 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep22leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep23dub && todo.temp7ep23dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 23 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep23dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep23leg && todo.temp7ep23leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 23 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep23leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep24dub && todo.temp7ep24dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 24 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep24dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep24leg && todo.temp7ep24leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 24 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep24leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep25dub && todo.temp7ep25dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 25 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep25dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep25leg && todo.temp7ep25leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 25 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep25leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep26dub && todo.temp7ep26dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 26 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep26dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep26leg && todo.temp7ep26leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 26 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep26leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep27dub && todo.temp7ep27dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 27 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep27dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep27leg && todo.temp7ep27leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 27 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep27leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep28dub && todo.temp7ep28dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 28 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep28dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep28leg && todo.temp7ep28leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 28 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep28leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep29dub && todo.temp7ep29dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 29 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep29dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep29leg && todo.temp7ep29leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 29 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep29leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep30dub && todo.temp7ep30dub.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 30 (Dublado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep30dub) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+<span *ngIf="todo.temp7ep30leg && todo.temp7ep30leg.length > 0">
+  <ion-chip>
+    <ion-icon name="videocam" color="danger"></ion-icon>
+    <ion-label>Temporada 7 - Episódio 30 (Legendado)</ion-label>
+  </ion-chip>
+<iframe
+  [src]= "(todo.temp7ep30leg) | safe"
+  frameborder="0"
+  allowfullscreen
+  width="410"
+  height="300"
+></iframe>
+
+</span>
+
+
+</ion-content>

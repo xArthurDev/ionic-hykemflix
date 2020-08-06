@@ -1,20 +1,73 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header no-border [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/icon/favicon.png" class="logo"></ion-img>
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content padding>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-slides [options]="slidesOptions2">
+    <ion-slide>
+  <ion-card class="card2" routerLink="/releases">
+    <h4>Lançamentos</h4>
+    <router-outlet></router-outlet>
+  </ion-card>
+    </ion-slide>
+    <ion-slide>
+  <ion-card class="card3" routerLink="/mwatched">
+    <h4>Mais assistidos</h4>
+    <router-outlet></router-outlet>
+  </ion-card>
+    </ion-slide>
+    <ion-slide>
+ <ion-card class="card4" routerLink="/upcoming">
+     <h4>Em breve</h4>
+     <router-outlet></router-outlet>
+  </ion-card>
+    </ion-slide>
+  </ion-slides>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="full" color="danger" (click)="LoadAds()">LoadAds</ion-button>
+ 
+  <ion-list>
+
+  <ion-item lines="none">
+    <p slot="start">Em Alta</p>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions3">
+    <ion-slide *ngFor="let item of hype">
+      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Séries</p>
+    <ion-icon color="danger" name="arrow-forward" slot="end" routerLink="/series"></ion-icon>
+    <router-outlet></router-outlet>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide *ngFor="let item of series">
+      <ion-card class="poster1_card" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster1_card" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item lines="none">
+    <p slot="start">Filmes</p>
+    <ion-icon color="danger" name="arrow-forward" slot="end" routerLink="/movies"></ion-icon>
+    <router-outlet></router-outlet>
+  </ion-item>
+
+  <ion-slides [options]="slidesOptions">
+    <ion-slide *ngFor="let item of movies">
+      <ion-card class="poster1_card" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster1_card" /> </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  </ion-list>
+
 </ion-content>
