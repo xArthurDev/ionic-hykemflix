@@ -3,7 +3,7 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-img src="../assets/icon/logo2.png" class="logo"></ion-img>
+          <ion-img src="../assets/icon/favicon.png" class="logo"></ion-img>
           <ion-list-header>HykemFlix</ion-list-header>
           <ion-note>Seu app de filmes e séries!</ion-note>
 
@@ -16,29 +16,35 @@
         </ion-list>
 
         <ion-list id="labels-list">
-          <ion-list-header>Créditos</ion-list-header>
+          <ion-list-header>Desenvolvido por</ion-list-header>
 
           <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="ribbon" md="ribbon"></ion-icon>
+            <ion-icon color="danger" slot="start" ios="code" md="code"></ion-icon>
             <ion-label>{{ label }}</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-list id="labels-list">
+        <ion-list-header>Suporte</ion-list-header>
+
+          <ion-item>
+            <ion-icon color="danger" slot="start" ios="mail" md="mail"></ion-icon>
+            <ion-label>hykem.corp@gmail.com</ion-label>
           </ion-item>
         </ion-list>
         <ion-list>
         <ion-item>
+          <ion-icon color="danger" slot="start" ios="moon" md="moon"></ion-icon>
           <ion-label>Modo Noturno</ion-label>
           <ion-toggle [checked]=isDarkMode (ionChange)="onClick($event)" slot="end">
           </ion-toggle>
         </ion-item>
         </ion-list>
         <ion-list>
-          <ion-list-header>Suporte</ion-list-header>
-            <ion-item>
-              <ion-label color="danger">hykem.corp@gmail.com</ion-label>
-            </ion-item>
-        </ion-list>
         <ion-item>
-          <b>HykemFlix Mobile vBeta 2.4.6</b>
+          <ion-icon color="danger" slot="start" ios="information-circle" md="information-circle"></ion-icon>
+          <b>HykemFlix Beta v2.4.6</b>
         </ion-item>
+        </ion-list>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
