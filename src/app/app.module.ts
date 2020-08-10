@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
+import { AdmobService } from './services/admob.service';
  
 @NgModule({
   declarations: [AppComponent],
@@ -24,9 +25,8 @@ import { AdMobFree } from '@ionic-native/admob-free/ngx';
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen, AdMobFree,AdmobService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AdMobFree
   ],
   bootstrap: [AppComponent]
 })
