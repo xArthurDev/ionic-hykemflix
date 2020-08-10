@@ -5,9 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MenuController } from '@ionic/angular';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { Router } from '@angular/router'
-import { Platform } from '@ionic/angular'
-import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free/ngx';
+import { AdmobService } from '../services/admob.service';
 
 @Pipe({
   name: 'safe'
@@ -19,8 +17,6 @@ import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-
-  interstitialConfig: AdMobFreeInterstitialConfig;
  
   todos: Todo[];
   movies: Todo[];
@@ -37,28 +33,10 @@ export class HomePage implements OnInit {
     slidesPerView: 1
   };
  
-  constructor(public platform:Platform, public admob:AdMobFree, public router:Router, private todoService: TodoService, private sanitizer: DomSanitizer, public menuCtrl: MenuController
+  constructor(private admobService: AdmobService, private todoService: TodoService, private sanitizer: DomSanitizer, public menuCtrl: MenuController
     ) {
       this.menuCtrl.enable(true);
-      this.platform.ready().then(()=>{
-        this.interstitialConfig = {
-          isTesting:true,
-          autoShow:true
-        }
-        this.admob.interstitial.config(this.interstitialConfig);
-
-        this.admob.on(this.admob.events.INTERSTITIAL_CLOSE).subscribe(()=>{
-          this.router.navigateByUrl('/series');
-        })
-      })
     }
-
-  LoadAds()
-  {
-    this.admob.interstitial.prepare().then(()=>{
-      
-    })
-  }
 
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
@@ -87,5 +65,14 @@ export class HomePage implements OnInit {
  
   remove(item) {
     this.todoService.removeTodo(item.id);
+  }
+
+  //FUNCTION FOR INTERSTITIAL
+  Interstitial(){
+    this.admobService.ShowInterstitial();
+  }
+  //FUNCTION FOR VIDEOREWARD
+  Reward(){
+    this.admobService.ShowRewardVideo();
   }
 }
