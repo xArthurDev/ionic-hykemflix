@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { AdmobService } from './services/admob.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -12,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   isDarkMode: boolean = false
   constructor(
+    private admobService: AdmobService,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
@@ -40,6 +43,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.admobService.ShowBanner();
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
