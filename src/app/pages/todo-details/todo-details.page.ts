@@ -5,6 +5,7 @@ import { NavController, LoadingController } from '@ionic/angular';
 
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { AdmobService } from '../../services/admob.service';
 
 @Pipe({
   name: 'safe'
@@ -282,7 +283,7 @@ export class TodoDetailsPage implements OnInit {
  
   todoId = null;
  
-  constructor(private route: ActivatedRoute, private router: Router, private todoService: TodoService, private loadingController: LoadingController, private sanitizer: DomSanitizer) { }
+  constructor(private admobService: AdmobService, private route: ActivatedRoute, private router: Router, private todoService: TodoService, private loadingController: LoadingController, private sanitizer: DomSanitizer) { }
  
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
@@ -326,6 +327,15 @@ export class TodoDetailsPage implements OnInit {
         this.router.navigateByUrl('home');
       });
     }
+  }
+
+  //FUNCTION FOR INTERSTITIAL
+  Interstitial(){
+    this.admobService.ShowInterstitial();
+  }
+  //FUNCTION FOR VIDEOREWARD
+  Reward(){
+    this.admobService.ShowRewardVideo();
   }
  
 }
