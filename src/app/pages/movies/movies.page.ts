@@ -23,7 +23,7 @@ export class MoviesPage implements OnInit {
   misterio: Todo[];
 
   slidesOptions3 = {
-    slidesPerView: 2
+    slidesPerView: 2.1
   };
 
   constructor(private todoService: TodoService, public menuCtrl: MenuController
