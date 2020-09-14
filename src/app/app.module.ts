@@ -14,6 +14,9 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
 import { AdmobService } from './services/admob.service';
+
+import { AppRate } from '@ionic-native/app-rate/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
  
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +27,8 @@ import { AdmobService } from './services/admob.service';
     AngularFirestoreModule, 
   ],
   providers: [
+    SocialSharing,
+    AppRate,
     StatusBar,
     SplashScreen, AdMobFree,AdmobService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
