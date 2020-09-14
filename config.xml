@@ -2,7 +2,7 @@
 <widget id="hykemflix.app" version="2.4.10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>HykemFlix</name>
     <description>Seu app de filmes e séries!</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Hykemflix</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
