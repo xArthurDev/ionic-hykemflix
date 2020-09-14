@@ -26,6 +26,7 @@ export class MwatchedPage implements OnInit {
       setTimeout(() => {
       }, 5000);
     }
+
   ngOnInit() {
     this.todoService.getAllMost().subscribe(res => {
       this.most = res
@@ -34,6 +35,15 @@ export class MwatchedPage implements OnInit {
     this.todoService.getAllMostS().subscribe(res => {
       this.mostS = res
     })
+  }
+
+  //FUNCTION FOR INTERSTITIAL
+  Interstitial(){
+    this.admobService.ShowInterstitial();
+  }
+  //FUNCTION FOR VIDEOREWARD
+  Reward(){
+    this.admobService.ShowRewardVideo();
   }
 
 }
