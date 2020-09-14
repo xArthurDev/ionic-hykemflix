@@ -36,6 +36,7 @@ export class MoviesPage implements OnInit {
       setTimeout(() => {
       }, 5000);
     }
+
   ngOnInit() {
     this.todoService.getAllAcao().subscribe(res => {
       this.acao = res
@@ -84,6 +85,15 @@ export class MoviesPage implements OnInit {
     this.todoService.getAllMisterio().subscribe(res => {
       this.misterio = res
     })
+  }
+
+  //FUNCTION FOR INTERSTITIAL
+  Interstitial(){
+    this.admobService.ShowInterstitial();
+  }
+  //FUNCTION FOR VIDEOREWARD
+  Reward(){
+    this.admobService.ShowRewardVideo();
   }
 
 }
