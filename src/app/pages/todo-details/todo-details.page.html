@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="danger">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+      <ion-back-button (click)="Interstitial()" defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-title>{{ todo.task }}</ion-title>
   </ion-toolbar>
@@ -46,7 +46,7 @@
     <ion-icon name="logo-youtube" color="danger"></ion-icon>
     <ion-label>Trailer</ion-label>
   </ion-chip>
-  <iframe *ngIf="todo.trailer && todo.trailer.length > 0"
+  <iframe (click)="Interstitial()" *ngIf="todo.trailer && todo.trailer.length > 0"
   [src]= "(todo.trailer) | safe"
   frameborder="0"
   allowfullscreen
@@ -59,7 +59,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Dublado</ion-label>
   </ion-chip>
-  <iframe
+  <iframe (click)="Interstitial()"
   [src]= "(todo.url) | safe"
   frameborder="0"
   allowfullscreen
@@ -74,7 +74,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Legendado</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.url2) | safe"
   frameborder="0"
   allowfullscreen
@@ -89,7 +89,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 1 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep1dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -104,7 +104,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 1 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep1leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -119,7 +119,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 2 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep2dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -134,7 +134,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 2 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep2leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -149,7 +149,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 3 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep3dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -164,7 +164,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 3 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep3leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -179,7 +179,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 4 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep4dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -194,7 +194,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 4 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep4leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -209,7 +209,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 5 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep5dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -224,7 +224,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 5 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep5leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -239,7 +239,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 6 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep6dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -254,7 +254,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 6 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep6leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -269,7 +269,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 7 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep7dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -284,7 +284,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 7 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep7leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -299,7 +299,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 8 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep8dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -314,7 +314,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 8 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep8leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -329,7 +329,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 9 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep9dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -344,7 +344,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 9 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep9leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -359,7 +359,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 10 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep10dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -374,7 +374,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 10 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep10leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -389,7 +389,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 11 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep11dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -404,7 +404,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 11 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep11leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -419,7 +419,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 12 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep12dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -434,7 +434,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 12 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep12leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -449,7 +449,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 13 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep13dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -464,7 +464,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 13 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep13leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -479,7 +479,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 14 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep14dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -494,7 +494,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 14 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep14leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -509,7 +509,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 15 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep15dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -524,7 +524,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 15 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep15leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -539,7 +539,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 16 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep16dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -554,7 +554,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 16 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep16leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -569,7 +569,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 17 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep17dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -584,7 +584,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 17 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep17leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -599,7 +599,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 18 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep18dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -614,7 +614,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 18 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep18leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -629,7 +629,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 19 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep19dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -644,7 +644,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 19 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep19leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -659,7 +659,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 20 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep20dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -674,7 +674,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 20 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep20leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -689,7 +689,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 21 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep21dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -704,7 +704,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 21 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep21leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -719,7 +719,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 22 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep22dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -734,7 +734,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 22 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep22leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -749,7 +749,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 23 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep23dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -764,7 +764,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 23 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep23leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -779,7 +779,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 24 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep24dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -794,7 +794,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 24 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep24leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -809,7 +809,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 25 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep25dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -824,7 +824,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 1 - Episódio 25 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp1ep25leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -840,7 +840,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 1 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep1dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -855,7 +855,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 1 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep1leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -870,7 +870,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 2 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep2dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -885,7 +885,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 2 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep2leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -900,7 +900,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 3 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep3dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -915,7 +915,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 3 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep3leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -930,7 +930,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 4 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep4dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -945,7 +945,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 4 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep4leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -960,7 +960,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 5 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep5dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -975,7 +975,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 5 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep5leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -990,7 +990,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 6 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep6dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1005,7 +1005,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 6 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep6leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1020,7 +1020,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 7 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep7dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1035,7 +1035,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 7 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep7leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1050,7 +1050,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 8 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep8dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1065,7 +1065,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 8 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep8leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1080,7 +1080,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 9 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep9dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1095,7 +1095,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 9 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep9leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1110,7 +1110,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 10 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep10dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1125,7 +1125,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 10 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep10leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1140,7 +1140,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 11 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep11dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1155,7 +1155,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 11 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep11leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1170,7 +1170,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 12 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep12dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1185,7 +1185,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 12 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep12leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1200,7 +1200,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 13 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep13dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1215,7 +1215,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 13 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep13leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1230,7 +1230,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 14 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep14dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1245,7 +1245,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 14 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep14leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1260,7 +1260,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 15 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep15dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1275,7 +1275,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 15 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep15leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1290,7 +1290,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 16 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep16dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1305,7 +1305,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 16 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep16leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1320,7 +1320,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 17 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep17dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1335,7 +1335,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 17 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep17leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1350,7 +1350,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 18 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep18dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1365,7 +1365,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 18 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep18leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1380,7 +1380,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 19 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep19dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1395,7 +1395,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 19 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep19leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1410,7 +1410,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 20 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep20dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1425,7 +1425,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 20 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep20leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1440,7 +1440,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 21 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep21dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1455,7 +1455,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 21 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep21leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1470,7 +1470,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 22 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep22dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1485,7 +1485,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 22 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep22leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1500,7 +1500,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 23 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep23dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1515,7 +1515,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 23 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep23leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1530,7 +1530,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 24 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep24dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1545,7 +1545,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 24 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep24leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1560,7 +1560,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 25 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep25dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1575,7 +1575,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 2 - Episódio 25 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp2ep25leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1591,7 +1591,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 1 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep1dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1606,7 +1606,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 1 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep1leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1621,7 +1621,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 2 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep2dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1636,7 +1636,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 2 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep2leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1651,7 +1651,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 3 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep3dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1666,7 +1666,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 3 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep3leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1681,7 +1681,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 4 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep4dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1696,7 +1696,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 4 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep4leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1711,7 +1711,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 5 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep5dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1726,7 +1726,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 5 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep5leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1741,7 +1741,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 6 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep6dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1756,7 +1756,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 6 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep6leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1771,7 +1771,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 7 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep7dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1786,7 +1786,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 7 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep7leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1801,7 +1801,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 8 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep8dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1816,7 +1816,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 8 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep8leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1831,7 +1831,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 9 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep9dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1846,7 +1846,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 9 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep9leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1861,7 +1861,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 10 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep10dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1876,7 +1876,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 10 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep10leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1891,7 +1891,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 11 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep11dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1906,7 +1906,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 11 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep11leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1921,7 +1921,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 12 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep12dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1936,7 +1936,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 12 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep12leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1951,7 +1951,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 13 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep13dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1966,7 +1966,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 13 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep13leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -1981,7 +1981,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 14 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep14dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -1996,7 +1996,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 14 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep14leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2011,7 +2011,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 15 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep15dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2026,7 +2026,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 15 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep15leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2041,7 +2041,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 16 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep16dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2056,7 +2056,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 16 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep16leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2071,7 +2071,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 17 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep17dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2086,7 +2086,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 17 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep17leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2101,7 +2101,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 18 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep18dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2116,7 +2116,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 18 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep18leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2131,7 +2131,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 19 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep19dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2146,7 +2146,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 19 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep19leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2161,7 +2161,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 20 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep20dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2176,7 +2176,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 20 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep20leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2191,7 +2191,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 21 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep21dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2206,7 +2206,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 21 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep21leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2221,7 +2221,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 22 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep22dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2236,7 +2236,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 22 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep22leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2251,7 +2251,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 23 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep23dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2266,7 +2266,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 23 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep23leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2281,7 +2281,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 24 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep24dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2296,7 +2296,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 24 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep24leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2311,7 +2311,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 25 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep25dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2326,7 +2326,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 3 - Episódio 25 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp3ep25leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2342,7 +2342,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 1 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep1dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2357,7 +2357,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 1 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep1leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2372,7 +2372,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 2 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep2dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2387,7 +2387,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 2 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep2leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2402,7 +2402,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 3 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep3dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2417,7 +2417,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 3 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep3leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2432,7 +2432,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 4 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep4dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2447,7 +2447,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 4 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep4leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2462,7 +2462,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 5 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep5dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2477,7 +2477,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 5 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep5leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2492,7 +2492,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 6 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep6dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2507,7 +2507,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 6 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep6leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2522,7 +2522,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 7 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep7dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2537,7 +2537,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 7 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep7leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2552,7 +2552,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 8 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep8dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2567,7 +2567,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 8 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep8leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2582,7 +2582,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 9 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep9dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2597,7 +2597,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 9 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep9leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2612,7 +2612,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 10 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep10dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2627,7 +2627,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 10 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep10leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2642,7 +2642,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 11 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep11dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2657,7 +2657,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 11 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep11leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2672,7 +2672,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 12 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep12dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2687,7 +2687,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 12 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep12leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2702,7 +2702,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 13 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep13dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2717,7 +2717,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 13 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep13leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2732,7 +2732,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 14 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep14dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2747,7 +2747,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 14 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep14leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2762,7 +2762,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 15 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep15dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2777,7 +2777,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 15 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep15leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2792,7 +2792,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 16 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep16dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2807,7 +2807,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 16 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep16leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2822,7 +2822,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 17 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep17dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2837,7 +2837,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 17 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep17leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2852,7 +2852,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 18 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep18dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2867,7 +2867,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 18 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep18leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2882,7 +2882,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 19 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep19dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2897,7 +2897,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 19 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep19leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2912,7 +2912,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 20 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep20dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2927,7 +2927,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 20 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep20leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2942,7 +2942,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 21 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep21dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2957,7 +2957,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 21 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep21leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -2972,7 +2972,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 22 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep22dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -2987,7 +2987,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 22 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep22leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3002,7 +3002,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 23 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep23dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3017,7 +3017,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 23 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep23leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3032,7 +3032,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 24 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep24dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3047,7 +3047,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 24 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep24leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3062,7 +3062,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 25 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep25dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3077,7 +3077,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 4 - Episódio 25 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp4ep25leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3092,7 +3092,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 1 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep1dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3107,7 +3107,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 1 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep1leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3122,7 +3122,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 2 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep2dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3137,7 +3137,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 2 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep2leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3152,7 +3152,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 3 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep3dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3167,7 +3167,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 3 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep3leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3182,7 +3182,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 4 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep4dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3197,7 +3197,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 4 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep4leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3212,7 +3212,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 5 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep5dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3227,7 +3227,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 5 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep5leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3242,7 +3242,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 6 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep6dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3257,7 +3257,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 6 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep6leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3272,7 +3272,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 7 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep7dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3287,7 +3287,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 7 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep7leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3302,7 +3302,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 8 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep8dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3317,7 +3317,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 8 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep8leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3332,7 +3332,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 9 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep9dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3347,7 +3347,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 9 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep9leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3362,7 +3362,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 10 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep10dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3377,7 +3377,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 10 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep10leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3392,7 +3392,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 11 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep11dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3407,7 +3407,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 11 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep11leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3422,7 +3422,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 12 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep12dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3437,7 +3437,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 12 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep12leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3452,7 +3452,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 13 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep13dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3467,7 +3467,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 13 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep13leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3482,7 +3482,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 14 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep14dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3497,7 +3497,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 14 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep14leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3512,7 +3512,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 15 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep15dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3527,7 +3527,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 15 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep15leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3542,7 +3542,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 16 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep16dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3557,7 +3557,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 16 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep16leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3572,7 +3572,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 17 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep17dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3587,7 +3587,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 17 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep17leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3602,7 +3602,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 18 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep18dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3617,7 +3617,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 18 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep18leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3632,7 +3632,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 19 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep19dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3647,7 +3647,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 19 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep19leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3662,7 +3662,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 20 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep20dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3677,7 +3677,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 20 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep20leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3692,7 +3692,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 21 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep21dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3707,7 +3707,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 21 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep21leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3722,7 +3722,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 22 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep22dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3737,7 +3737,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 22 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep22leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3752,7 +3752,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 23 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep23dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3767,7 +3767,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 23 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep23leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3782,7 +3782,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 24 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep24dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3797,7 +3797,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 24 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep24leg) | safe"
   frameborder="0"
   allowfullscreen
@@ -3812,7 +3812,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 25 (Dublado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep25dub) | safe"
   frameborder="0"
   allowfullscreen
@@ -3827,7 +3827,7 @@
     <ion-icon name="videocam" color="danger"></ion-icon>
     <ion-label>Temporada 5 - Episódio 25 (Legendado)</ion-label>
   </ion-chip>
-<iframe
+<iframe (click)="Interstitial()"
   [src]= "(todo.temp5ep25leg) | safe"
   frameborder="0"
   allowfullscreen
