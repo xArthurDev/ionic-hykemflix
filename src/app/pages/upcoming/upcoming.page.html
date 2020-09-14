@@ -1,7 +1,7 @@
 <ion-header no-border [translucent]="true">
-  <ion-toolbar color="light">
+  <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button (click)="Interstitial()"></ion-menu-button>
     </ion-buttons>
     <ion-img src="../assets/icon/favicon.png" class="logo"></ion-img>
   </ion-toolbar>
@@ -13,20 +13,26 @@
 <ion-content padding>
 
   <ion-item lines="none">
-    <p slot="start">Séries disponíveis em breve</p>
+    <p slot="start" style="font-family:KeepCalm;">Séries disponíveis em breve</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of upS">
       <ion-card class="poster"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Filmes disponíveis em breve</p>
+    <p slot="start" style="font-family:KeepCalm;">Filmes disponíveis em breve</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of up">
       <ion-card class="poster"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
