@@ -3,4 +3,8 @@
     height: 200px;
     background-size: auto;
   }
-  
+  :focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
