@@ -21,7 +21,7 @@
       <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
     </ion-item>
     <ion-slide *ngFor="let item of acao">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
