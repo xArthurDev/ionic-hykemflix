@@ -9,26 +9,22 @@ providedIn: 'root'
 export class AdmobService {
 //BANNER CONFIG
 bannerConfig: AdMobFreeBannerConfig = {
-id: 'ca-app-pub-9842149140567121/4378888315',
-size: 'SMART_BANNER', 
-autoShow: true,
-isTesting: false,
-bannerAtTop: false,
-overlap: false,
-offsetTopBar: false
+id: "ca-app-pub-9842149140567121/4378888315",
+/* isTesting: false, */
+autoShow: false,
 };
 //INTERSTITIAL CONFIG
 interstitialConfig: AdMobFreeInterstitialConfig = {
-id: 'ca-app-pub-9842149140567121/6925160601',
-isTesting: false,
-autoShow: false,
+id: "ca-app-pub-9842149140567121/6925160601",
+/* isTesting: false, */
+autoShow: true,
 //id: "ID GENERATED AT ADMOB ca-app-pub FOR PROD"
 };
 //REWARD VIDEO CONFIG.
 RewardVideoConfig: AdMobFreeRewardVideoConfig = {
-id: 'ca-app-pub-9842149140567121/4235418081',
-isTesting: false,
-autoShow: false//,
+id: "ca-app-pub-9842149140567121/4235418081",
+/* isTesting: false, */
+autoShow: true//,
 //id: "ID GENERATED AT ADMOB ca-app-pub FOR PROD"
 };
 //ADD PLATFORM Y ADMOB AT CONSTRUCTOR.
@@ -59,19 +55,20 @@ console.log('PROBLEM LOADING REWARDVIDEO: ', e)
 ShowBanner() {
 //CHECK AND SHOW BANNER
 this.admobFree.banner.prepare().then(() => {
+    this.admobFree.banner.show().then(() =>
 console.log('BANNER LOADED')
-}).catch(e =>
+)}).catch(e =>
 console.log('PROBLEM LOADING BANNER: ', e)
 );
 }
 ShowInterstitial() {
 //CHECK AND SHOW INTERSTITIAL
 this.admobFree.interstitial.isReady().then(() => {
-//AT .ISREADY SHOW 
+this.admobFree.interstitial.prepare().then(() =>
 this.admobFree.interstitial.show().then(() => {
 console.log('INTERSTITIAL LOADED')
 })
-.catch(e => console.log('PROBLEM LOADING REWARD VIDEO: ', e)  );
+.catch(e => console.log('PROBLEM LOADING REWARD VIDEO: ', e)  ));
 })
 .catch(e => console.log('PROBLEM LOADING REWARD VIDEO: ', e)  );
 }
@@ -79,11 +76,11 @@ console.log('INTERSTITIAL LOADED')
 ShowRewardVideo() {
 //CHECK AND SHOW REWARDVIDEO
 this.admobFree.rewardVideo.isReady().then(() => {
-//AT .ISREADY SHOW
+this.admobFree.rewardVideo.prepare().then(() =>
 this.admobFree.rewardVideo.show().then(() => {
 console.log('BANNER LOADED')
 })
-.catch(e => console.log('PROBLEM LOADING REWARD VIDEO: ', e)  );
+.catch(e => console.log('PROBLEM LOADING REWARD VIDEO: ', e)  ));
 })
 .catch(e => console.log('PROBLEM LOADING REWARD VIDEO: ', e)  );
 }
