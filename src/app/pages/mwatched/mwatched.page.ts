@@ -22,6 +22,10 @@ export class MwatchedPage implements OnInit {
       this.menuCtrl.enable(true);
     }
 
+    ionViewWillEnter() {
+      setTimeout(() => {
+      }, 5000);
+    }
   ngOnInit() {
     this.todoService.getAllMost().subscribe(res => {
       this.most = res
