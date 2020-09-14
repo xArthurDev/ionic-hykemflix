@@ -39,3 +39,8 @@ ion-menu-button {
     height: 200px;
     background-size: cover;
   }
+  :focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
