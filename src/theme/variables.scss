@@ -1,6 +1,17 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('../assets/fonts/coolvetica.ttf');
+
+  font-family: 'BebasNeuePro';
+  src: url('../assets/fonts/BebasNeuePro.ttf');
+
+  font-family: 'KeepCalm';
+  src: url('../assets/fonts/KeepCalm.ttf');
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
