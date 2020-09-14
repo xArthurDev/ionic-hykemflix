@@ -3,9 +3,9 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-img src="../assets/icon/favicon.png" class="logo"></ion-img>
-          <ion-list-header>HykemFlix</ion-list-header>
-          <ion-note>Seu app de filmes e séries!</ion-note>
+          <ion-img src="../assets/icon/logo3.png" class="logo"></ion-img>
+          <ion-list-header style="font-family:KeepCalm;">HykemFlix</ion-list-header>
+          <ion-note style="font-family:Coolvetica;">Seu app de filmes e séries!</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
