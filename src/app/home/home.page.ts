@@ -24,13 +24,13 @@ export class HomePage implements OnInit {
   hype: Todo[];
 
   slidesOptions = {
-    slidesPerView: 2
+    slidesPerView: 2.1
   };
   slidesOptions2 = {
-    slidesPerView: 2
+    slidesPerView: 2.1
   };
   slidesOptions3 = {
-    slidesPerView: 1
+    slidesPerView: 1.2
   };
  
   constructor(private admobService: AdmobService, private todoService: TodoService, private sanitizer: DomSanitizer, public menuCtrl: MenuController
