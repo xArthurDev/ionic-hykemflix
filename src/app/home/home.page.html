@@ -10,21 +10,24 @@
 <ion-content padding>
 
   <ion-slides [options]="slidesOptions2">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 70px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide>
-  <ion-card class="card2" routerLink="/releases">
-    <h4>Lançamentos</h4>
+  <ion-card class="card2" (click)="Interstitial()" routerLink="/releases">
+    <h4 style="font-family:KeepCalm; font-size: 18px;">Lançamentos</h4>
     <router-outlet></router-outlet>
   </ion-card>
     </ion-slide>
     <ion-slide>
-  <ion-card class="card3" routerLink="/mwatched">
-    <h4>Mais assistidos</h4>
+  <ion-card class="card3" (click)="Interstitial()" routerLink="/mwatched">
+    <h4 style="font-family:KeepCalm; font-size: 18px;">Mais assistidos</h4>
     <router-outlet></router-outlet>
   </ion-card>
     </ion-slide>
     <ion-slide>
- <ion-card class="card4" routerLink="/upcoming">
-     <h4>Em breve</h4>
+ <ion-card class="card4" (click)="Interstitial()" routerLink="/upcoming">
+     <h4 style="font-family:KeepCalm; font-size: 18px;">Em breve</h4>
      <router-outlet></router-outlet>
   </ion-card>
     </ion-slide>
