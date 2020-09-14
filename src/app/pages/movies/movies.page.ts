@@ -27,7 +27,7 @@ export class MoviesPage implements OnInit {
     slidesPerView: 2.1
   };
 
-  constructor(private todoService: TodoService, public menuCtrl: MenuController
+  constructor(private admobService: AdmobService, private todoService: TodoService, public menuCtrl: MenuController
     ) {
       this.menuCtrl.enable(true);
      }
