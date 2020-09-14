@@ -57,6 +57,9 @@
   </ion-item>
 
   <ion-slides [options]="slidesOptions">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of series">
       <ion-card class="poster1_card" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster1_card" /> </ion-card>
     </ion-slide>
