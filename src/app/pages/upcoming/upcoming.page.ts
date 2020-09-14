@@ -21,6 +21,11 @@ export class UpcomingPage implements OnInit {
       this.menuCtrl.enable(true);
     }
 
+    ionViewWillEnter() {
+      setTimeout(() => {
+      }, 5000);
+    }
+
   ngOnInit() {
     this.todoService.getAllUp().subscribe(res => {
       this.up = res

@@ -21,6 +21,10 @@ export class ReleasesPage implements OnInit {
       this.menuCtrl.enable(true);
     }
 
+    ionViewWillEnter() {
+      setTimeout(() => {
+      }, 5000);
+    }
   ngOnInit() {
     this.todoService.getAllRelease().subscribe(res => {
       this.release = res

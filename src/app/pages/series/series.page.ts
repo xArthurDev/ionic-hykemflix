@@ -28,6 +28,11 @@ export class SeriesPage implements OnInit {
       this.menuCtrl.enable(true);
     }
 
+    ionViewWillEnter() {
+      setTimeout(() => {
+      }, 5000);
+    }
+
   ngOnInit() {
     this.todoService.getAllAcaoS().subscribe(res => {
       this.acaoS = res
