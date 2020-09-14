@@ -75,3 +75,8 @@ ion-menu-button {
   align-items: center;
   color: #fff;
 }
+:focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+}
