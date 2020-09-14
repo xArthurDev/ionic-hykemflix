@@ -32,6 +32,10 @@ export class MoviesPage implements OnInit {
       this.menuCtrl.enable(true);
      }
 
+     ionViewWillEnter() {
+      setTimeout(() => {
+      }, 5000);
+    }
   ngOnInit() {
     this.todoService.getAllAcao().subscribe(res => {
       this.acao = res
