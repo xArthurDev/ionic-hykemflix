@@ -39,82 +39,106 @@
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Romance</p>
+    <p slot="start" style="font-family:KeepCalm;">Romance</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of romance">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Animação</p>
+    <p slot="start" style="font-family:KeepCalm;">Animação</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of animacao">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Aventura</p>
+    <p slot="start" style="font-family:KeepCalm;">Aventura</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of aventura">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Família</p>
+    <p slot="start" style="font-family:KeepCalm;">Família</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of familia">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Fantasia</p>
+    <p slot="start" style="font-family:KeepCalm;">Fantasia</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of fantasia">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Ficção Científica</p>
+    <p slot="start" style="font-family:KeepCalm;">Ficção Científica</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of ficcao">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Terror</p>
+    <p slot="start" style="font-family:KeepCalm;">Terror</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of terror">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Suspense</p>
+    <p slot="start" style="font-family:KeepCalm;">Suspense</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of suspense">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
@@ -123,18 +147,24 @@
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of drama">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
   <ion-item lines="none">
-    <p slot="start">Mistério</p>
+    <p slot="start" style="font-family:KeepCalm;">Mistério</p>
   </ion-item>
 
   <ion-slides [options]="slidesOptions3">
+    <ion-item *ngIf="!data">
+      <ion-skeleton-text animated style="width: 180px; height: 240px"></ion-skeleton-text>
+    </ion-item>
     <ion-slide *ngFor="let item of misterio">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
   
