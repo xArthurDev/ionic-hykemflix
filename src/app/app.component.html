@@ -25,6 +25,15 @@
           </ion-item>
           </ion-list>
 
+        
+          <!-- <ion-list id="labels-list">
+            <ion-list-header style="font-family:Coolvetica;">Avalie o app</ion-list-header>
+    
+              <ion-item>
+                <ion-icon color="danger" slot="start" ios="star" md="star"></ion-icon>
+                <ion-button fill="solid" color="danger" (click)="rate()">Clique para avaliar</ion-button>
+              </ion-item>
+            </ion-list> -->
           <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon color="danger" slot="start" ios="code" md="code"></ion-icon>
             <ion-label>{{ label }}</ion-label>
