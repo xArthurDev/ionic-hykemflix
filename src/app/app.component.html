@@ -50,13 +50,13 @@
             <ion-label>hykem.corp@gmail.com</ion-label>
           </ion-item>
         </ion-list>
-        <ion-list>
-        <ion-item>
-          <ion-icon color="danger" slot="start" ios="moon" md="moon"></ion-icon>
-          <ion-label>Modo Noturno</ion-label>
-          <ion-toggle [checked]=isDarkMode (ionChange)="onClick($event)" slot="end">
-          </ion-toggle>
-        </ion-item>
+        <ion-list id="labels-list">
+        <ion-list-header style="font-family:Coolvetica;">Doação</ion-list-header>
+
+          <ion-item>
+            <ion-icon color="danger" slot="start" ios="wallet" md="wallet"></ion-icon>
+            <a class="href" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TA4BZC47AMHK6&source=url">Clique para doar</a>
+          </ion-item>
         </ion-list>
         <ion-list>
         <ion-item>
