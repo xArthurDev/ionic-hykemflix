@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AppRate } from '@ionic-native/app-rate/ngx';
 
 import { AdmobService } from './services/admob.service';
 
@@ -12,8 +13,12 @@ import { AdmobService } from './services/admob.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  image: string;
+  message:string;
+  imageForSharing:string;
   isDarkMode: boolean = false
   constructor(
+    private appRate: AppRate,
     private admobService: AdmobService,
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -79,6 +84,17 @@ export class AppComponent {
       document.body.setAttribute('color-theme', 'dark');		
     } else {
       document.body.setAttribute('color-theme', 'light');
+    }
+  }
+
+  rate(){
+    this.appRate.preferences = {
+      usesUntilPrompt: 3,
+      storeAppURL: {
+       ios: '<app_id>',
+       android: 'market://details?id=<com.pobreflix.app>',
+       windows: 'ms-windows-store://review/?ProductId=<store_id>'
+      }
     }
   }
 }
