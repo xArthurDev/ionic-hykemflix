@@ -120,3 +120,18 @@ ion-menu ion-content {
   .logo{
       height: 100px;
   }
+  .router-link{
+    --color: red;
+    --background: red;
+    color: red;
+  }
+  .href{
+    --color: red;
+    --background: red;
+    color: red;
+  }
+  :focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
