@@ -46,7 +46,7 @@
       <ion-skeleton-text animated style="width: 300px; height: 400px"></ion-skeleton-text>
     </ion-item>
     <ion-slide *ngFor="let item of hype">
-      <ion-card class="poster" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> <img src="{{ item.poster }}" class="poster" /> </ion-card>
     </ion-slide>
   </ion-slides>
 
