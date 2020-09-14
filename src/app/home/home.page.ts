@@ -43,6 +43,11 @@ export class HomePage implements OnInit {
     return this.sanitizer.bypassSecurityTrustScript(url);
   }
 
+  ionViewWillEnter() {
+    setTimeout(() => {
+    }, 5000);
+  }
+
  
   ngOnInit() {
    
