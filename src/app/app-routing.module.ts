@@ -26,6 +26,14 @@ const routes: Routes = [
     path: 'upcoming',
     loadChildren: () => import('./pages/upcoming/upcoming.module').then( m => m.UpcomingPageModule)
   },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'categories',
+    loadChildren: () => import('./pages/categories/categories.module').then( m => m.CategoriesPageModule)
+  },
 ];
  
 @NgModule({
