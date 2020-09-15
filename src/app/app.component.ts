@@ -42,6 +42,16 @@ export class AppComponent {
       title: 'Séries',
       url: '/series',
       icon: 'videocam'
+    },
+    {
+      title: 'Categorias',
+      url: '/categories',
+      icon: 'pricetags'
+    },
+    {
+      title: 'Pesquisar',
+      url: '/search',
+      icon: 'search'
     }
   ];
   public labels = ['Hykem Corporation'];
