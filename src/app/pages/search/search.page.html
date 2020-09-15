@@ -1,0 +1,27 @@
+<ion-header no-border [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="Interstitial()">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/icon/pesquisar.png" class="logo"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    placeholder="Pesquisar"
+    showcancelbutton=""
+    (ionInput)="filterList($event)"
+  ></ion-searchbar>
+
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of Gtodos">
+      
+      <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]">
+        <img src="{{ item.poster }}" class="poster" /> 
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+  
+</ion-content>
