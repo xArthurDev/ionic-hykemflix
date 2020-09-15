@@ -1,0 +1,450 @@
+<ion-header no-border [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="Interstitial()">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/icon/categorias.png" class="logo"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <ion-segment 
+    value="today" 
+    color="secondary"
+    scrollable="false"
+    mode="md"
+    [(ngModel)]="segment" 
+    (ionChange)="segmentChanged($event)">
+
+      <ion-segment-button value="today" mode="md">
+        <ion-label style="color: #b6030c; font-family: KeepCalm; font-size: 20px;">Filmes</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="tomorrow" mode="md">
+        <ion-label style="color: #b6030c; font-family: KeepCalm; font-size: 20px;">Séries</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+
+
+    <div *ngIf="segment === 'today'">
+
+      <ion-segment 
+      value="today2" 
+      color="secondary"
+      scrollable="false"
+      mode="md"
+      [(ngModel)]="segment" 
+      (ionChange)="segmentChanged($event)">
+  
+        <ion-segment-button value="acao" mode="md">
+          <ion-card class="card1" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Ação</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+        <ion-segment-button value="animacao" mode="md">
+          <ion-card class="card2" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Animação</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+      </ion-segment>
+
+      <ion-segment 
+      value="today2" 
+      color="secondary"
+      scrollable="false"
+      mode="md"
+      [(ngModel)]="segment" 
+      (ionChange)="segmentChanged($event)">
+  
+        <ion-segment-button value="aventura" mode="md">
+          <ion-card class="card3" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Aventura</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+        <ion-segment-button value="comedia" mode="md">
+          <ion-card class="card4" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Comédia</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+      </ion-segment>
+
+      <ion-segment 
+      value="today2" 
+      color="secondary"
+      scrollable="false"
+      mode="md"
+      [(ngModel)]="segment" 
+      (ionChange)="segmentChanged($event)">
+  
+        <ion-segment-button value="familia" mode="md">
+          <ion-card class="card5" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Família</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+        <ion-segment-button value="fantasia" mode="md">
+          <ion-card class="card6" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Fantasia</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+      </ion-segment>
+
+      <ion-segment 
+      value="today2" 
+      color="secondary"
+      scrollable="false"
+      mode="md"
+      [(ngModel)]="segment" 
+      (ionChange)="segmentChanged($event)">
+  
+        <ion-segment-button value="ficcao" mode="md">
+          <ion-card class="card7" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Ficção</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+        <ion-segment-button value="terror" mode="md">
+          <ion-card class="card8" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Terror</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+      </ion-segment>
+
+      <ion-segment 
+      value="today2" 
+      color="secondary"
+      scrollable="false"
+      mode="md"
+      [(ngModel)]="segment" 
+      (ionChange)="segmentChanged($event)">
+  
+        <ion-segment-button value="suspense" mode="md">
+          <ion-card class="card9" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Suspense</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+        <ion-segment-button value="romance" mode="md">
+          <ion-card class="card10" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Romance</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+      </ion-segment>
+
+      <ion-segment 
+      value="today2" 
+      color="secondary"
+      scrollable="false"
+      mode="md"
+      [(ngModel)]="segment" 
+      (ionChange)="segmentChanged($event)">
+  
+        <ion-segment-button value="drama" mode="md">
+          <ion-card class="card11" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Drama</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+        <ion-segment-button value="misterio" mode="md">
+          <ion-card class="card12" (click)="Interstitial()">
+            <h4 style="font-family:KeepCalm; font-size: 18px;">Mistério</h4>
+          </ion-card>
+        </ion-segment-button>
+  
+      </ion-segment>
+</div>
+
+<div *ngIf="segment === 'tomorrow'">
+
+  <ion-segment 
+  value="today2" 
+  color="secondary"
+  scrollable="false"
+  mode="md"
+  [(ngModel)]="segment" 
+  (ionChange)="segmentChanged($event)">
+
+    <ion-segment-button value="acaoS" mode="md">
+      <ion-card class="card13" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Ação</h4>
+      </ion-card>
+    </ion-segment-button>
+
+    <ion-segment-button value="aventuraS" mode="md">
+      <ion-card class="card14" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Aventura</h4>
+      </ion-card>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <ion-segment 
+  value="today2" 
+  color="secondary"
+  scrollable="false"
+  mode="md"
+  [(ngModel)]="segment" 
+  (ionChange)="segmentChanged($event)">
+
+    <ion-segment-button value="comediaS" mode="md">
+      <ion-card class="card15" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Comédia</h4>
+      </ion-card>
+    </ion-segment-button>
+
+    <ion-segment-button value="ficcaoS" mode="md">
+      <ion-card class="card16" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Ficção</h4>
+      </ion-card>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <ion-segment 
+  value="today2" 
+  color="secondary"
+  scrollable="false"
+  mode="md"
+  [(ngModel)]="segment" 
+  (ionChange)="segmentChanged($event)">
+
+    <ion-segment-button value="terrorS" mode="md">
+      <ion-card class="card17" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Terror</h4>
+      </ion-card>
+    </ion-segment-button>
+
+    <ion-segment-button value="suspenseS" mode="md">
+      <ion-card class="card18" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Suspense</h4>
+      </ion-card>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <ion-segment 
+  value="today2" 
+  color="secondary"
+  scrollable="false"
+  mode="md"
+  [(ngModel)]="segment" 
+  (ionChange)="segmentChanged($event)">
+
+    <ion-segment-button value="romanceS" mode="md">
+      <ion-card class="card19" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Romance</h4>
+      </ion-card>
+    </ion-segment-button>
+
+    <ion-segment-button value="dramaS" mode="md">
+      <ion-card class="card20" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Drama</h4>
+      </ion-card>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <ion-segment 
+  value="today2" 
+  color="secondary"
+  scrollable="false"
+  mode="md"
+  [(ngModel)]="segment" 
+  (ionChange)="segmentChanged($event)">
+
+    <ion-segment-button value="misterioS" mode="md">
+      <ion-card class="card21" (click)="Interstitial()">
+        <h4 style="font-family:KeepCalm; font-size: 18px;">Mistério</h4>
+      </ion-card>
+    </ion-segment-button>
+
+  </ion-segment>
+
+</div>
+
+<div *ngIf="segment === 'acao'">
+  <ion-item *ngFor="let item of acao">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'animacao'">
+  <ion-item *ngFor="let item of animacao">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'aventura'">
+  <ion-item *ngFor="let item of aventura">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'comedia'">
+  <ion-item *ngFor="let item of comedia">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'familia'">
+  <ion-item *ngFor="let item of familia">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'fantasia'">
+  <ion-item *ngFor="let item of fantasia">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'ficcao'">
+  <ion-item *ngFor="let item of ficcao">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'terror'">
+  <ion-item *ngFor="let item of terror">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'suspense'">
+  <ion-item *ngFor="let item of suspense">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'romance'">
+  <ion-item *ngFor="let item of romance">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'drama'">
+  <ion-item *ngFor="let item of drama">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'misterio'">
+  <ion-item *ngFor="let item of misterio">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+
+
+
+
+<div *ngIf="segment === 'acaoS'">
+  <ion-item *ngFor="let item of acaoS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'aventuraS'">
+  <ion-item *ngFor="let item of aventuraS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'comediaS'">
+  <ion-item *ngFor="let item of comediaS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'ficcaoS'">
+  <ion-item *ngFor="let item of ficcaoS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'terrorS'">
+  <ion-item *ngFor="let item of terrorS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'suspenseS'">
+  <ion-item *ngFor="let item of suspenseS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'romanceS'">
+  <ion-item *ngFor="let item of romanceS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'dramaS'">
+  <ion-item *ngFor="let item of dramaS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+<div *ngIf="segment === 'misterioS'">
+  <ion-item *ngFor="let item of misterioS">
+  <ion-card class="poster" (click)="Interstitial()" button [routerLink]="['/details', item.id]"> 
+    <img src="{{ item.poster }}" class="poster" /> 
+  </ion-card>
+  </ion-item>
+</div>
+
+
+
+</ion-content>
