@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Todo, TodoService } from '../../services/todo.service';
 import { first } from 'rxjs/operators';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AdmobService } from '../../services/admob.service';
 
 @Component({
   selector: 'app-search',
@@ -14,7 +15,7 @@ export class SearchPage implements OnInit {
   Gtodos: Todo[];
   private db: AngularFirestore;
 
-  constructor(private todoService: TodoService, db: AngularFirestore) {
+  constructor(private admobService: AdmobService, private todoService: TodoService, db: AngularFirestore) {
     this.todosCollection = db.collection<Todo>('todos');
  }
 
@@ -40,16 +41,14 @@ export class SearchPage implements OnInit {
   }
 
   async filterList(event) {
-    this.todos = await this.initializeItems();
     const searchTerm = event.srcElement.value;
-  
+    
     if (!searchTerm) {
+      this.todos = await this.initializeItems();
       return;
     }
 
-    
-  
-    this.Gtodos = this.Gtodos.filter(todo => {
+    this.Gtodos = this.todos.filter(todo => {
       if (todo.task && searchTerm) {
         return (todo.task.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
       }
@@ -57,4 +56,13 @@ export class SearchPage implements OnInit {
     });
   }
 
+
+  //FUNCTION FOR INTERSTITIAL
+  Interstitial(){
+    this.admobService.ShowInterstitial();
+  }
+  //FUNCTION FOR VIDEOREWARD
+  Reward(){
+    this.admobService.ShowRewardVideo();
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo, TodoService } from 'src/app/services/todo.service';
+import { AdmobService } from '../../services/admob.service';
 
 @Component({
   selector: 'app-categories',
@@ -37,7 +38,7 @@ export class CategoriesPage implements OnInit {
     slidesPerView: 2.1
   };
 
-  constructor(private todoService: TodoService,) { }
+  constructor(private todoService: TodoService, private admobService: AdmobService) { }
 
   ngOnInit() {
     this.todoService.getAllAcao().subscribe(res => {
@@ -127,6 +128,15 @@ export class CategoriesPage implements OnInit {
 
   segmentChanged(){
     console.log(this.segmentChanged)
+  }
+
+  //FUNCTION FOR INTERSTITIAL
+  Interstitial(){
+    this.admobService.ShowInterstitial();
+  }
+  //FUNCTION FOR VIDEOREWARD
+  Reward(){
+    this.admobService.ShowRewardVideo();
   }
 
 }
