@@ -47,8 +47,8 @@ export class SearchPage implements OnInit {
       this.todos = await this.initializeItems();
       return;
     }
-
-    this.Gtodos = this.todos.filter(todo => {
+    
+    this.Gtodos = this.Gtodos.filter(todo => {
       if (todo.task && searchTerm) {
         return (todo.task.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
       }
