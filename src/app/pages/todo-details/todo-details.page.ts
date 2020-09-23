@@ -2,6 +2,7 @@ import { Todo, TodoService } from './../../services/todo.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController, LoadingController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -20,6 +21,7 @@ import { AdmobService } from '../../services/admob.service';
 export class TodoDetailsPage implements OnInit {
  
   todo: Todo = {
+    isLinkBroken: false,
     task: 'Título',
     genre: 'Gênero',
     trailer: 'http://google.com.br',
@@ -283,7 +285,7 @@ export class TodoDetailsPage implements OnInit {
  
   todoId = null;
  
-  constructor(private admobService: AdmobService, private route: ActivatedRoute, private router: Router, private todoService: TodoService, private loadingController: LoadingController, private sanitizer: DomSanitizer) { }
+  constructor(public alertController: AlertController, private admobService: AdmobService, private route: ActivatedRoute, private router: Router, private todoService: TodoService, private loadingController: LoadingController, private sanitizer: DomSanitizer) { }
  
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
@@ -328,6 +330,37 @@ export class TodoDetailsPage implements OnInit {
         this.router.navigateByUrl('home');
       });
     }
+  }
+
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      animated: true,
+      cssClass: 'my-custom-class',
+      header: 'Reportar',
+      message: 'Você deseja reportar esse link como <strong>quebrado</strong> ou <strong>indisponível?</strong> (Confirme duas vezes)',
+      buttons: [
+        {
+          cssClass: 'button-color',
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          cssClass: 'button-color',
+          text: 'Sim',
+          handler: () => {
+            if (this.todoId) {
+              this.todoService.updateTodo(this.todo, this.todoId).then(() => {
+                this.todo.isLinkBroken = true
+              })}
+            console.log(this.todo.isLinkBroken, 'Seu report foi enviado com sucesso.');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
   //FUNCTION FOR INTERSTITIAL
