@@ -3,9 +3,10 @@ import { Todo, TodoService } from '../services/todo.service';
 
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MenuController } from '@ionic/angular';
+import { LoadingController, MenuController } from '@ionic/angular';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AdmobService } from '../services/admob.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Pipe({
   name: 'safe'
@@ -18,6 +19,8 @@ import { AdmobService } from '../services/admob.service';
 })
 export class HomePage implements OnInit {
  
+  todoId = null;
+
   todos: Todo[];
   movies: Todo[];
   series: Todo[];
@@ -33,7 +36,7 @@ export class HomePage implements OnInit {
     slidesPerView: 1.2
   };
  
-  constructor(private admobService: AdmobService, private todoService: TodoService, private sanitizer: DomSanitizer, public menuCtrl: MenuController
+  constructor(private admobService: AdmobService, private todoService: TodoService, private sanitizer: DomSanitizer, public menuCtrl: MenuController, private router: Router, private loadingController: LoadingController,
     ) {
       this.menuCtrl.enable(true);
     }
@@ -50,6 +53,10 @@ export class HomePage implements OnInit {
 
  
   ngOnInit() {
+
+    
+    this.admobService.ShowBanner(); 
+    
    
     this.todoService.getTodos().subscribe(res => {
       this.todos = res;
