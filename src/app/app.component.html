@@ -20,7 +20,7 @@
           <ion-item>
             <ion-icon color="danger" slot="start" ios="moon" md="moon"></ion-icon>
             <ion-label>Modo Noturno</ion-label>
-            <ion-toggle [checked]=isDarkMode (ionChange)="onClick($event)" slot="end">
+            <ion-toggle [checked]=isDarkMode (ionChange)="onClick($event)" (click)="Reward()" slot="end">
             </ion-toggle>
           </ion-item>
           </ion-list>
@@ -61,7 +61,7 @@
         <ion-list>
         <ion-item>
           <ion-icon color="danger" slot="start" ios="information-circle" md="information-circle"></ion-icon>
-          <b>HykemFlix Beta v2.4.15</b>
+          <b>HykemFlix Beta v2.4.20</b>
         </ion-item>
         </ion-list>
       </ion-content>
