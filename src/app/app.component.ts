@@ -49,6 +49,11 @@ export class AppComponent {
       icon: 'pricetags'
     },
     {
+      title: 'Pedidos',
+      url: '/requests',
+      icon: 'receipt'
+    },
+    {
       title: 'Pesquisar',
       url: '/search',
       icon: 'search'
