@@ -3,7 +3,15 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
  
+
+export interface Request {
+  title: string;
+  upvote: number;
+  voteCount: number;
+  id?: string;
+}
 export interface Todo {
+  isLinkBroken: boolean;
   id?: string;
   task: string;
   genre: string;
@@ -270,6 +278,7 @@ export interface Todo {
   providedIn: 'root'
 })
 export class TodoService {
+  private requestsCollection: AngularFirestoreCollection<Request>;
   private todosCollection: AngularFirestoreCollection<Todo>;
   private moviesCollection: AngularFirestoreCollection<Todo>;
   private seriesCollection: AngularFirestoreCollection<Todo>;
@@ -303,6 +312,7 @@ export class TodoService {
   private mostSCollection: AngularFirestoreCollection<Todo>;
   private upSCollection: AngularFirestoreCollection<Todo>;
  
+  private requests: Observable<Request[]>;
   private todos: Observable<Todo[]>;
   private movies: Observable<Todo[]>;
   private series: Observable<Todo[]>;
@@ -341,6 +351,7 @@ export class TodoService {
   constructor(db: AngularFirestore) {
     
   
+    this.requestsCollection = db.collection<Request>('requests');
     this.todosCollection = db.collection<Todo>('todos');
     this.moviesCollection = db.collection<Todo>('todos', ref => ref.where('type', '==', 'Filme'));
     this.seriesCollection = db.collection<Todo>('todos', ref => ref.where('type', '==', 'Série'));
@@ -374,6 +385,17 @@ export class TodoService {
     this.mostSCollection = db.collection<Todo>('todos', ref => ref.where('mostS', '==', 'true'));
     this.upSCollection = db.collection<Todo>('todos', ref => ref.where('upS', '==', 'true'));
 
+
+    this.requests = this.requestsCollection.snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          //console.log(a.payload.doc.data())
+          return { id, ...data };
+        });
+      })
+    );
  
     this.todos = this.todosCollection.snapshotChanges().pipe(
       map(actions => {
@@ -687,12 +709,25 @@ export class TodoService {
     );
   }
  
+
+  getRequests() {
+    return this.requests;
+  }
+
   getTodos() {
     return this.todos;
   }
  
   getTodo(id) {
     return this.todosCollection.doc<Todo>(id).valueChanges();
+  }
+
+  getRequest(id) {
+    return this.requestsCollection.doc<Request>(id).valueChanges();
+  }
+
+  updateRequest(request: Request, id: string) {
+    return this.requestsCollection.doc(id).update(request);
   }
  
   updateTodo(todo: Todo, id: string) {
@@ -701,6 +736,10 @@ export class TodoService {
  
   addTodo(todo: Todo) {
     return this.todosCollection.add(todo);
+  }
+
+  addRequest(request: Request) {
+    return this.requestsCollection.add(request);
   }
  
   removeTodo(id) {
