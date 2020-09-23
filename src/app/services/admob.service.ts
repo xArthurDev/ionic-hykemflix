@@ -61,6 +61,11 @@ console.log('BANNER LOADED')
 console.log('PROBLEM LOADING BANNER: ', e)
 );
 }
+HideBanner() {
+//CHECK AND SHOW BANNER
+this.admobFree.banner.hide() 
+console.log('BANNER CLOSED')
+}
 ShowInterstitial() {
 //CHECK AND SHOW INTERSTITIAL
 this.admobFree.interstitial.isReady().then(() => {
