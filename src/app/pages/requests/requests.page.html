@@ -1,0 +1,36 @@
+<ion-header no-border [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/icon/pedidos.png" class="logo"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list> 
+      <h1 style="font-family: KeepCalm; font-size: 35px; text-align: center; color: #b6030c">
+        Votação de pedidos
+      </h1>
+
+        <h3 style="font-family: KeepCalm; font-size: 12px; text-align: center; color: rgb(199, 199, 199);">
+          Escolha um título que você quer ver aqui
+          ou acrescente um título na lista.
+          Toda semana são adicionados novos títulos mais votados. (você será notificado xD)
+        </h3>
+
+        
+ 
+  <ion-list>
+      <ion-item *ngFor="let item of requests">
+        <ion-label style="font-family: KeepCalm;">{{ item.title }}</ion-label>
+        <ion-label>Votos: {{ item.voteCount }} </ion-label>
+        <ion-button ion-button block [disabled]="isenabled != false" expand="full" fill="solid" color="danger" 
+        style="font-family: KeepCalm;" (click)="upVote(item)">Votar</ion-button>
+      </ion-item>
+  </ion-list>
+      
+  <ion-button fill="clear" color="danger" size="small" style="font-size: 10px; font-family: KeepCalm;" (click)="presentPrompt()">Novo pedido</ion-button>
+  </ion-list>
+    
+</ion-content>
