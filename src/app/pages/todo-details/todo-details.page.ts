@@ -291,6 +291,7 @@ export class TodoDetailsPage implements OnInit {
   }
 
   ngOnInit() {
+    this.admobService.HideBanner();
     this.todoId = this.route.snapshot.params['id'];
     if (this.todoId)  {
       this.loadTodo();
