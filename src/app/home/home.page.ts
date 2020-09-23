@@ -68,6 +68,19 @@ export class HomePage implements OnInit {
     })
   }
  
+  async loadPage() {
+ 
+    const loading = await this.loadingController.create({
+      message: 'Carregando..'
+    });
+    await loading.present();
+ 
+    if (this.Interstitial) {
+        loading.dismiss();
+      
+    }
+  }
+
   remove(item) {
     this.todoService.removeTodo(item.id);
   }
